@@ -1,0 +1,1 @@
+edgrid.menu('nav', 'menu');

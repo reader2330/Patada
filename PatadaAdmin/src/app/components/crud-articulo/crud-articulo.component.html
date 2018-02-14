@@ -1,0 +1,44 @@
+
+<div class="container-fluid" *ngIf="opcion == 1">
+    <form (ngSubmit)="EnviarArticulo()"  class="container formulario">
+
+
+        <mat-form-field>
+            <input matInput placeholder="Titulo" name="titulo" [(ngModel)]="articulo_ctr.titulo">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Imagen" name="img" [(ngModel)]="articulo_ctr.img">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Alt" name="alt" [(ngModel)]="articulo_ctr.alt">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Url" name="url" [(ngModel)]="articulo_ctr.url">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-select placeholder="Categoria" name="categoria_id" [(ngModel)]="articulo_ctr.categoria_id" >
+                <mat-option *ngFor="let categoria of categorias" [value]="categoria.id_categoria" >
+                    {{ categoria.nombre_categoria }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Descripción" name ="descripcion" [(ngModel)]="articulo_ctr.descripcion">
+        </mat-form-field>
+
+
+
+        <button style="width:50%; margin-left:250px; margin-top:20px" mat-raised-button color="primary">Accent</button>
+
+
+    </form>
+</div>
+
+<div class="container-fluid" *ngIf="opcion == 2">
+    <p>delete</p>
+</div>
+
+<div class="container-fluid" *ngIf="opcion == 3">
+
+</div>
+
